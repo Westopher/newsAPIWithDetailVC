@@ -19,6 +19,29 @@ class ArticleModel {
         
         var stringUrl = "https://newsapi.org/v2/everything?q=bitcoin&from=2019-07-08&sortBy=publishedAt&apiKey=5ca10b2d20a545099a108a3aeceb329c"
         
+        let url = URL(string: stringUrl)
+        
+        guard url != nil else {
+            print("Could not get url")
+            return
+        }
+        
+        
+        let session = URLSession.shared
+        
+        let dataTask = session.dataTask(with: url!) { (data, response, error) in
+            if error != nil && data != nil {
+                do {
+                    let decoder = JSONDecoder()
+                    let result = try decoder.decode(ArticleService.self, from: data!)
+                } catch {
+                    print("Could not decode the JSON")
+                    return
+                }
+            }
+            
+        }
+            
         
         //make api request
         

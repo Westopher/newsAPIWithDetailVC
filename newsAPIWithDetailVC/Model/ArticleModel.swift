@@ -38,7 +38,7 @@ class ArticleModel {
                         decoder.decode(ArticleService.self, from: data!)
                     
                     let articles = result.articles!
-                    
+                    print(articles)
                     DispatchQueue.main.async {
                         self.delegate?.articlesRetrieved(articles)
                     }

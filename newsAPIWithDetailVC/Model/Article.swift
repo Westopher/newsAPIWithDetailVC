@@ -13,7 +13,6 @@ struct ArticleService: Decodable {
     var articles: [Article]?
 }
 
-
 struct Article: Decodable {
     var author: String?
     var title: String?

@@ -17,7 +17,7 @@ class ArticleModel {
     
     func getArticles() {
         
-        var stringUrl = "https://newsapi.org/v2/everything?q=bitcoin&from=2019-07-08&sortBy=publishedAt&apiKey=5ca10b2d20a545099a108a3aeceb329c"
+        var stringUrl = "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=5ca10b2d20a545099a108a3aeceb329c"
         
         let url = URL(string: stringUrl)
         
@@ -26,29 +26,34 @@ class ArticleModel {
             return
         }
         
-        
         let session = URLSession.shared
         
         let dataTask = session.dataTask(with: url!) { (data, response, error) in
-            if error != nil && data != nil {
+           
+            if error == nil && data != nil {
+                
                 do {
                     let decoder = JSONDecoder()
-                    let result = try decoder.decode(ArticleService.self, from: data!)
-                } catch {
+                    let result = try
+                        decoder.decode(ArticleService.self, from: data!)
+                    
+                    let articles = result.articles!
+                    
+                    DispatchQueue.main.async {
+                        self.delegate?.articlesRetrieved(articles)
+                    }
+                }
+                catch {
                     print("Could not decode the JSON")
                     return
                 }
             }
             
         }
-            
         
-        //make api request
+        dataTask.resume()
         
-        //parse json
         
-        //pass results back to VC to be displayed w/delegate and protocol pattern
-        delegate?.articlesRetrieved([Article]())
     }
     
 }

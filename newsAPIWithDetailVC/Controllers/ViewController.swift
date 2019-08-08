@@ -9,14 +9,11 @@
 import UIKit
 
 
-class ViewController: UIViewController, ArticleModelProtocol {
+class ViewController: UIViewController {
     
-    func articlesRetrieved(_ articles: [Article]) {
-        print("protocol set up successfully")
-    }
-    
-   
     var model = ArticleModel()
+    var articles = [Article]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,3 +27,8 @@ class ViewController: UIViewController, ArticleModelProtocol {
 
 }
 
+extension ViewController: ArticleModelProtocol {
+    func articlesRetrieved(_ articles: [Article]) {
+        print("protocol set up successfully")
+    }
+}

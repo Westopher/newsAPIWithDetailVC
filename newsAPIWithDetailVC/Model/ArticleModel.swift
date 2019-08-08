@@ -17,7 +17,7 @@ class ArticleModel {
     
     func getArticles() {
         
-        var stringUrl = "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=5ca10b2d20a545099a108a3aeceb329c"
+        var stringUrl = "https://newsapi.org/v2/top-headlines?country=us&apiKey=5ca10b2d20a545099a108a3aeceb329c"
         
         let url = URL(string: stringUrl)
         

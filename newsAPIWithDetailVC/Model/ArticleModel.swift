@@ -9,8 +9,9 @@
 import Foundation
 
 class ArticleModel {
+    
     func getArticles() {
         
-    
     }
+    
 }

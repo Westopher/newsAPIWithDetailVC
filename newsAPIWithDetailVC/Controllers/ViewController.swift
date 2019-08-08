@@ -9,12 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var model = Article()
-        
-        
+   
+    var model = ArticleModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        model.getArticles()
+        
+        
     }
 
 

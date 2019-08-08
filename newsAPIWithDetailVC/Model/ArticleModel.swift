@@ -8,7 +8,12 @@
 
 import Foundation
 
+protocol ArticleModelProtocol {
+    func articlesRetrieved(_ articles: [Article])
+}
+
 class ArticleModel {
+    var delegate: ArticleModelProtocol?
     
     func getArticles() {
         //make api request
@@ -16,6 +21,7 @@ class ArticleModel {
         //parse json
         
         //pass results back to VC to be displayed w/delegate and protocol pattern
+        delegate?.articlesRetrieved([Article]())
     }
     
 }

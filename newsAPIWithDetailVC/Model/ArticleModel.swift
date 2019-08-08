@@ -11,7 +11,11 @@ import Foundation
 class ArticleModel {
     
     func getArticles() {
+        //make api request
         
+        //parse json
+        
+        //pass results back to VC to be displayed w/delegate and protocol pattern
     }
     
 }

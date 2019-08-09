@@ -54,6 +54,10 @@
                                         </constraints>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="dX1-S6-o2q"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1wS-9a-AvE"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

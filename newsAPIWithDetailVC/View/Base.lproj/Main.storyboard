@@ -65,6 +65,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="IV7-3x-vlh" id="7rQ-TV-URZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,9 +80,28 @@
                     <view key="view" contentMode="scaleToFill" id="OTi-zt-mDw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Bn-Wt-y3e">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="9Bn-Wt-y3e" secondAttribute="bottom" id="SyQ-N8-DIi"/>
+                            <constraint firstItem="9Bn-Wt-y3e" firstAttribute="leading" secondItem="OTi-zt-mDw" secondAttribute="leading" id="bOB-i8-Lfb"/>
+                            <constraint firstItem="9Bn-Wt-y3e" firstAttribute="top" secondItem="OTi-zt-mDw" secondAttribute="top" id="dbe-Gx-zU5"/>
+                            <constraint firstAttribute="trailing" secondItem="9Bn-Wt-y3e" secondAttribute="trailing" id="dpz-kU-GnI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MxD-2j-AJk"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="9Bn-Wt-y3e" id="8uc-Ta-LxB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Fn-Rg-m8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

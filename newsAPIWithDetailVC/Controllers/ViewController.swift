@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var model = ArticleModel()
     var articles = [Article]()
     
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

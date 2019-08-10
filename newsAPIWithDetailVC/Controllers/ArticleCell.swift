@@ -27,6 +27,9 @@ class ArticleCell: UITableViewCell {
     }
     
     func displayArticle(article: Article) {
+       //clear imageview to prevent re-using images
+        articleImageView.image = nil
+        
         articleToDisplay = article
         
         headlineLabel.text = articleToDisplay!.title!

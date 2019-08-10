@@ -22,7 +22,7 @@ class ArticleModel {
         let url = URL(string: stringUrl)
         
         guard url != nil else {
-            print("Could not get url")
+            print("Could not get url for article json")
             return
         }
         

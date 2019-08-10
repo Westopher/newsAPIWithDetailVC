@@ -39,7 +39,19 @@ class ArticleCell: UITableViewCell {
             print("could not get url")
             return
         }
+            
+            let session = URLSession.shared
+            
+            let dataTask = session.dataTask(with: url!) { (data, response, error) in
+                
+                if error == nil && data != nil {
+                    DispatchQueue.main.async {
+                        self.articleImageView.image = UIImage(data: data!)
+                    }
+            
+        }
         
     }
-
+            dataTask.resume()
+}
 }

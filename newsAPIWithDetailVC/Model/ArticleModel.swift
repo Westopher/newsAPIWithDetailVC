@@ -37,10 +37,10 @@ class ArticleModel {
                     let result = try
                         decoder.decode(ArticleService.self, from: data!)
                     
-                    let articles = result.articles!
-                    print(articles)
+                    let articles2 = result.articles!
+                    print(articles2)
                     DispatchQueue.main.async {
-                        self.delegate?.articlesRetrieved(articles)
+                        self.delegate?.articlesRetrieved(articles2)
                     }
                 }
                 catch {

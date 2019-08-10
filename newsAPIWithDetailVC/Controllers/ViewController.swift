@@ -12,7 +12,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var model = ArticleModel()
-    var articles = [Article]()
+    var articles1 = [Article]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return articles.count
+        return articles1.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -39,13 +39,13 @@ extension ViewController: UITableViewDataSource {
     }
     
     
-    
 }
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //segue to detail view and pass selected article to that view
     }
+   
     
 }
 
@@ -53,5 +53,10 @@ extension ViewController: UITableViewDelegate {
 extension ViewController: ArticleModelProtocol {
     func articlesRetrieved(_ articles: [Article]) {
         print("protocol set up successfully")
+        
+        self.articles1 = articles
+        tableView.reloadData()
     }
+    
+    
 }

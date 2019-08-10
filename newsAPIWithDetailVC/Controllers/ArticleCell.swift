@@ -29,7 +29,16 @@ class ArticleCell: UITableViewCell {
     func displayArticle(article: Article) {
         articleToDisplay = article
         
-        headlineLabel.text = articleToDisplay?.title!
+        headlineLabel.text = articleToDisplay!.title!
+        
+        let urlString = articleToDisplay!.urlToImage!
+        
+        let url = URL(string: urlString)
+        
+        guard url != nil else {
+            print("could not get url")
+            return
+        }
         
     }
 

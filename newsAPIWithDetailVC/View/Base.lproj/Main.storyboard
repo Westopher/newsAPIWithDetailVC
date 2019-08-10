@@ -30,7 +30,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4CD-Jn-aBa">
-                                                    <rect key="frame" x="288" y="2" width="124" height="100"/>
+                                                    <rect key="frame" x="288" y="-1.5" width="124" height="100"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKT-D0-Y91">
                                                     <rect key="frame" x="20" y="20" width="250" height="59.5"/>
@@ -41,8 +41,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="eKT-D0-Y91" firstAttribute="top" secondItem="lob-aT-Igb" secondAttribute="top" constant="20" id="9Wd-Ia-iv9"/>
+                                                <constraint firstAttribute="bottom" secondItem="4CD-Jn-aBa" secondAttribute="bottom" constant="1" id="Fn7-Q3-99c"/>
                                                 <constraint firstItem="eKT-D0-Y91" firstAttribute="leading" secondItem="lob-aT-Igb" secondAttribute="leading" constant="20" id="KlW-xM-sou"/>
-                                                <constraint firstItem="4CD-Jn-aBa" firstAttribute="top" secondItem="lob-aT-Igb" secondAttribute="top" constant="2" id="PdI-ag-hjo"/>
                                                 <constraint firstAttribute="trailing" secondItem="4CD-Jn-aBa" secondAttribute="trailing" constant="2" id="ZSB-pu-ZGW"/>
                                                 <constraint firstAttribute="bottom" secondItem="eKT-D0-Y91" secondAttribute="bottom" constant="20" id="nKJ-ue-FIm"/>
                                             </constraints>

@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArticleCell" rowHeight="100" id="u21-hT-Hbf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArticleCell" rowHeight="100" id="u21-hT-Hbf" customClass="ArticleCell" customModule="newsAPIWithDetailVC" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u21-hT-Hbf" id="lob-aT-Igb">
@@ -52,6 +52,10 @@
                                             <constraint firstItem="4CD-Jn-aBa" firstAttribute="width" secondItem="u21-hT-Hbf" secondAttribute="width" multiplier="0.3" id="VRo-c6-sIO"/>
                                             <constraint firstItem="4CD-Jn-aBa" firstAttribute="height" secondItem="u21-hT-Hbf" secondAttribute="height" id="WO8-sr-5Fb"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="articleImageView" destination="4CD-Jn-aBa" id="xve-du-ywZ"/>
+                                            <outlet property="headlineLabel" destination="eKT-D0-Y91" id="kMm-Bq-S05"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

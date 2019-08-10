@@ -40,7 +40,6 @@ extension ViewController: UITableViewDataSource {
         
         cell.displayArticle(article: article)
         
-        
         return cell
     }
     

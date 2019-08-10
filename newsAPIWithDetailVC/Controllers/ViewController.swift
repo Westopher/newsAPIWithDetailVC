@@ -35,6 +35,12 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath) as! ArticleCell
+        
+        let article = articles1[indexPath.row]
+        
+        cell.displayArticle(article: article)
+        
+        
         return cell
     }
     

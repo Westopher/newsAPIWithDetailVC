@@ -33,6 +33,11 @@ class ArticleCell: UITableViewCell {
         
         let urlString = articleToDisplay!.urlToImage!
         
+        guard urlString != nil else {
+            print("couldn't get image url")
+            return
+        }
+        
         let url = URL(string: urlString)
         
         guard url != nil else {

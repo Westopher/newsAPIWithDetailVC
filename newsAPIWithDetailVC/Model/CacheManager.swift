@@ -17,7 +17,6 @@ class CacheManager {
         
     }
     
-    
     static func retrieveImageData(url: String) -> Data? {
         return imageDictionary[url]
     }

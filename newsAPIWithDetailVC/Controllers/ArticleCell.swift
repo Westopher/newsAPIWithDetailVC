@@ -41,6 +41,13 @@ class ArticleCell: UITableViewCell {
             return
         }
         
+        let cachedData = CacheManager.retrieveImageData(url: urlString)
+        
+        if cachedData != nil {
+            articleImageView.image = UIImage(data: cachedData!)
+            return
+        }
+        
         let url = URL(string: urlString)
         
         guard url != nil else {
@@ -53,6 +60,7 @@ class ArticleCell: UITableViewCell {
             let dataTask = session.dataTask(with: url!) { (data, response, error) in
                 
                 if error == nil && data != nil {
+                    CacheManager.saveImageData(url: urlString, data: data!)
                     if self.articleToDisplay!.urlToImage == urlString {
                     DispatchQueue.main.async {
                         self.articleImageView.image = UIImage(data: data!)

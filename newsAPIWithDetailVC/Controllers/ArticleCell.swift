@@ -27,12 +27,20 @@ class ArticleCell: UITableViewCell {
     }
     
     func displayArticle(article: Article) {
-       //clear imageview to prevent re-using images
+       headlineLabel.alpha = 0
+        articleImageView.alpha = 0
+        
+        //clear imageview to prevent re-using images
         articleImageView.image = nil
         
         articleToDisplay = article
         
         headlineLabel.text = articleToDisplay!.title!
+        
+        UIView.animate(withDuration: 1.6, delay: 0, options: .curveEaseOut, animations: {
+            self.headlineLabel.alpha = 1
+        }, completion: nil)
+        
         
         let urlString = articleToDisplay?.urlToImage
         
@@ -45,6 +53,9 @@ class ArticleCell: UITableViewCell {
         
         if cachedData != nil {
             articleImageView.image = UIImage(data: cachedData!)
+            UIView.animate(withDuration: 1.6, delay: 0, options: .curveEaseOut, animations: {
+                self.articleImageView.alpha = 1
+            }, completion: nil)
             return
         }
         
@@ -64,6 +75,10 @@ class ArticleCell: UITableViewCell {
                     if self.articleToDisplay!.urlToImage == urlString {
                     DispatchQueue.main.async {
                         self.articleImageView.image = UIImage(data: data!)
+                        
+                        UIView.animate(withDuration: 1.6, delay: 0, options: .curveEaseOut, animations: {
+                            self.articleImageView.alpha = 1
+                        }, completion: nil)
                     }
                 }
         }

@@ -99,13 +99,18 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="c5V-AH-5n1">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="9Bn-Wt-y3e" secondAttribute="bottom" id="SyQ-N8-DIi"/>
+                            <constraint firstItem="c5V-AH-5n1" firstAttribute="centerY" secondItem="OTi-zt-mDw" secondAttribute="centerY" id="XO5-lV-WYL"/>
                             <constraint firstItem="9Bn-Wt-y3e" firstAttribute="leading" secondItem="OTi-zt-mDw" secondAttribute="leading" id="bOB-i8-Lfb"/>
                             <constraint firstItem="9Bn-Wt-y3e" firstAttribute="top" secondItem="OTi-zt-mDw" secondAttribute="top" id="dbe-Gx-zU5"/>
                             <constraint firstAttribute="trailing" secondItem="9Bn-Wt-y3e" secondAttribute="trailing" id="dpz-kU-GnI"/>
+                            <constraint firstItem="c5V-AH-5n1" firstAttribute="centerX" secondItem="OTi-zt-mDw" secondAttribute="centerX" id="p1Q-ip-inK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MxD-2j-AJk"/>
                     </view>

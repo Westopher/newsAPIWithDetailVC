@@ -34,21 +34,21 @@ class ArticleCell: UITableViewCell {
         
         headlineLabel.text = articleToDisplay!.title!
         
-        let urlString = articleToDisplay!.urlToImage!
+        let urlString = articleToDisplay?.urlToImage
         
         guard urlString != nil else {
             print("couldn't get image url")
             return
         }
         
-        let cachedData = CacheManager.retrieveImageData(url: urlString)
+        let cachedData = CacheManager.retrieveImageData(url: urlString ?? "no urlstring")
         
         if cachedData != nil {
             articleImageView.image = UIImage(data: cachedData!)
             return
         }
         
-        let url = URL(string: urlString)
+        let url = URL(string: urlString!)
         
         guard url != nil else {
             print("could not get url")
@@ -60,7 +60,7 @@ class ArticleCell: UITableViewCell {
             let dataTask = session.dataTask(with: url!) { (data, response, error) in
                 
                 if error == nil && data != nil {
-                    CacheManager.saveImageData(url: urlString, data: data!)
+                    CacheManager.saveImageData(url: (urlString)!, data: data!)
                     if self.articleToDisplay!.urlToImage == urlString {
                     DispatchQueue.main.async {
                         self.articleImageView.image = UIImage(data: data!)

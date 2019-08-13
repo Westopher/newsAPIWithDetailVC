@@ -13,6 +13,7 @@ class DetailVC: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
     var articleURL: String?
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func viewWillAppear(_ animated: Bool) {
         if articleURL != nil {
@@ -27,9 +28,17 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        spinner.alpha = 1
+        spinner.startAnimating()
+        
+        webView.navigationDelegate = self
     }
-    
 
+}
 
+extension DetailVC: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        spinner.stopAnimating()
+        spinner.alpha = 0
+    }
 }

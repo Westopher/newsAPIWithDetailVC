@@ -115,6 +115,7 @@
                         <viewLayoutGuide key="safeArea" id="MxD-2j-AJk"/>
                     </view>
                     <connections>
+                        <outlet property="spinner" destination="c5V-AH-5n1" id="HhE-MQ-QbS"/>
                         <outlet property="webView" destination="9Bn-Wt-y3e" id="8uc-Ta-LxB"/>
                     </connections>
                 </viewController>

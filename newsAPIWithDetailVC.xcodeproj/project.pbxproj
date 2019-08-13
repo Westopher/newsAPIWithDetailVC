@@ -16,6 +16,7 @@
 		3D2F4C9022FD73F00078E70C /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F4C8F22FD73F00078E70C /* DetailVC.swift */; };
 		3D2F4C9422FEF1500078E70C /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F4C9322FEF1500078E70C /* ArticleCell.swift */; };
 		3D2F4C96230038010078E70C /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F4C95230038010078E70C /* CacheManager.swift */; };
+		3D3004352302DD7D0006032D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3004342302DD7D0006032D /* WebKit.framework */; };
 		3DD07D3022FBF7A200971E54 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD07D2F22FBF7A200971E54 /* ArticleModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		3D2F4C8F22FD73F00078E70C /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		3D2F4C9322FEF1500078E70C /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		3D2F4C95230038010078E70C /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		3D3004342302DD7D0006032D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		3DD07D2F22FBF7A200971E54 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D3004352302DD7D0006032D /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +53,7 @@
 			children = (
 				3D2233EE22FAF92E00861D70 /* newsAPIWithDetailVC */,
 				3D2233ED22FAF92E00861D70 /* Products */,
+				3D3004332302DD7D0006032D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +105,14 @@
 				3D2F4C8F22FD73F00078E70C /* DetailVC.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3D3004332302DD7D0006032D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D3004342302DD7D0006032D /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

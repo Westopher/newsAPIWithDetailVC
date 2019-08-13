@@ -24,6 +24,21 @@ class ViewController: UIViewController {
         
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let indexPath = tableView.indexPathForSelectedRow
+        
+        guard indexPath != nil else {
+            print("article not selected")
+            return
+        }
+        
+        let article = articles1[indexPath!.row]
+        
+        let detailVC = segue.destination as! DetailVC
+        
+        detailVC.articleURL = article.url
+    }
 
 
 }

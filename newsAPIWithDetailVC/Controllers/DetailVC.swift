@@ -12,6 +12,18 @@ import WebKit
 class DetailVC: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
+    var articleURL: String?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if articleURL != nil {
+            let url = URL(string: articleURL!)
+            guard url != nil else {
+                return
+            }
+        let request = URLRequest(url: url!)
+        webView.load(request)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
